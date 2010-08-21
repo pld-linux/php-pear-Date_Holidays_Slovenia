@@ -1,19 +1,17 @@
 %include	/usr/lib/rpm/macros.php
-%define		_class		Date
-%define		_subclass	Holidays_Slovenia
 %define		_status		alpha
 %define		_pearname	Date_Holidays_Slovenia
 Summary:	%{_pearname} - Driver based class to calculate holidays in Slovenia
 Summary(pl.UTF-8):	%{_pearname} - klasa do obliczania dat świąt słoweńskich
 Name:		php-pear-%{_pearname}
 Version:	0.1.2
-Release:	1
+Release:	2
 License:	PHP License
 Group:		Development/Languages/PHP
 Source0:	http://pear.php.net/get/%{_pearname}-%{version}.tgz
 # Source0-md5:	0869c22ae5c631d5b4da1ff2f4e1a026
 URL:		http://pear.php.net/package/Date_Holidays_Slovenia/
-BuildRequires:	php-pear-PEAR
+BuildRequires:	php-pear-PEAR >= 1:1.4.0-0.b1
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 Requires:	php-pear
 Requires:	php-pear-Date_Holidays >= 0.18.0
@@ -38,8 +36,8 @@ Summary:	Tests for PEAR::%{_pearname}
 Summary(pl.UTF-8):	Testy dla PEAR::%{_pearname}
 Group:		Development/Languages/PHP
 Requires:	%{name} = %{version}-%{release}
-AutoReq:	no
 AutoProv:	no
+AutoReq:	no
 
 %description tests
 Tests for PEAR::%{_pearname}.
